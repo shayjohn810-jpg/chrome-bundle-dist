@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "latest_version": "148.0.7778.178",
+  "platforms": {
+    "win-x64": {
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v148.0.7778.178/chrome-bundle-148.0.7778.178-win-x64.zip",
+      "sha256": "a0e441b216118952c448914705b6335b8f9e5250e05e064b9d8d9604cf3a3507",
+      "size_bytes": 218996638,
+      "binary_path": "chrome.exe"
+    }
+  }
+}
