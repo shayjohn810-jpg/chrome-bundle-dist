@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.53",
-  "release_url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/tag/v0.3.53-launcher",
-  "release_notes": "Epic 6: defensive hardening (electron-log finishing pass, JSON DoS guard 50 MB, SQL identifier validation in migrations).",
-  "published_at": "2026-06-06T21:10:00Z",
+  "latest_version": "0.3.54",
+  "release_url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/tag/v0.3.54-launcher",
+  "release_notes": "Epic 7 phase 1+2: App.tsx 705 -> 516 lines. helpers + useImportFlows hook extracted.",
+  "published_at": "2026-06-06T21:20:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/download/v0.3.53-launcher/TomeAnty-Launcher-0.3.53-win-x64.zip",
-      "sha256": "ca20df30beb5cee2925b08e3b95bd159e49aca0c5eeb59e55443a2fe762c36c2",
-      "size_bytes": 123420747
+      "url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/download/v0.3.54-launcher/TomeAnty-Launcher-0.3.54-win-x64.zip",
+      "sha256": "07f643dcd6e7fed8e4cf330dfff9a0b70e71fe5d73313eb6bb45a84ff1d348b8",
+      "size_bytes": 123421040
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "8b440118a4dffec7fa800d51c9ad109482729c5d688f5baf7e6f4c209e71fb771e5fdd952f1fc6e18fc989d7597673091eff4b884fe280dd2be1a2d892affd0c"
+  "signature": "c75de79d865a1c6f6cf8d34285f9eb877302502e66c5393ac5b7ff75539cb5a5d8de60af9a10fcda8355e6d1d91aa4896cd048293dccd6403558b56b618be909"
 }
