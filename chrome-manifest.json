@@ -8,5 +8,7 @@
       "size_bytes": 241492636,
       "binary_path": "chrome.exe"
     }
-  }
+  },
+  "signer_key_id": "7702c59e",
+  "signature": "e8af0aba4a133a9034cb1184efbb69dda8dc188b6fc1e70ed2daad41874e5b7fd0a824324590f80ef205977d4e853116bc59d4161c2879f5911c7a3669fb6f03"
 }
