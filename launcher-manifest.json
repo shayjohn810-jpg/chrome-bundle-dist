@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.55",
-  "release_url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/tag/v0.3.55-launcher",
-  "release_notes": "Epic 7 phase 3: useSelectionActions hook. App.tsx 705 -> 414 lines across phases 1+2+3.",
-  "published_at": "2026-06-06T21:30:00Z",
+  "latest_version": "0.3.56",
+  "release_url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/tag/v0.3.56-launcher",
+  "release_notes": "Epic 7 phase 4: useKeyboardShortcuts hook. App.tsx final: 705 -> 383 lines (-46%) across phases 1-4.",
+  "published_at": "2026-06-06T21:40:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/download/v0.3.55-launcher/TomeAnty-Launcher-0.3.55-win-x64.zip",
-      "sha256": "9dbb416342a9c44d3538fc5690b7b9ad538ef7e7f6a71d8f882eb6b7b755a781",
-      "size_bytes": 123421535
+      "url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/download/v0.3.56-launcher/TomeAnty-Launcher-0.3.56-win-x64.zip",
+      "sha256": "c42d3b04e9ca047ad2a40dbeb22fc64bb8ae0583a3bbe62e01f4dd02719430bb",
+      "size_bytes": 123421379
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "5ff37fc05482550239f9bfdf343528a6b83e9f135a577ffabbb1a5a27081f7b971294a48caefa93c2344d402656d91e03286b30b0ac77a800d9171b3d46c4d02"
+  "signature": "c50965dfed753b59101c1cac4e4bec0eedfaff7683dff695451c50a89966ad569f7318b4c6175ffb75a8db0385103be3c449ed34610b15288443c7538d40ac02"
 }
