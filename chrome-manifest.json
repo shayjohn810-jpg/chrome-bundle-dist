@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "latest_version": "148.0.7778.178-tomeanty.1",
+  "latest_version": "148.0.7778.178-tomeanty.2",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v148.0.7778.178-tomeanty.1/chrome-bundle-148.0.7778.178-tomeanty.1-win-x64.zip",
-      "sha256": "414d9d19da01b1afffabb067f714a6f58b494b25d7dd889e197bc8d7a56c7be7",
-      "size_bytes": 241483706,
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v148.0.7778.178-tomeanty.2/chrome-bundle-148.0.7778.178-tomeanty.2-win-x64.zip",
+      "sha256": "f714193ffaefad5d71b2420d44b17b63687511bc510228bcc03932dcb8b6a52b",
+      "size_bytes": 241491800,
       "binary_path": "chrome.exe"
     }
   }
