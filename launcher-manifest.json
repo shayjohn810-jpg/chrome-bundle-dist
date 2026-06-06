@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.58",
-  "release_url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/tag/v0.3.58-launcher",
-  "release_notes": "Last touch on log privacy (proxy-auth extension path + raw err object stripped). main.log fully scrubbed of usernames, UUIDs, absolute paths, stack traces.",
-  "published_at": "2026-06-06T22:00:00Z",
+  "latest_version": "0.3.59",
+  "release_url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/tag/v0.3.59-launcher",
+  "release_notes": "HOTFIX: window.api was undefined since v0.3.43 because sandbox:true silently breaks contextBridge with ESM preload on Electron 31. Reverted to sandbox:false. About/Settings/Quick/Create buttons work again.",
+  "published_at": "2026-06-06T22:55:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/download/v0.3.58-launcher/TomeAnty-Launcher-0.3.58-win-x64.zip",
-      "sha256": "1d0d6c49cb2b77b3a21c87391cb7cb93e2c60496e06bc70193489193770fdfb6",
-      "size_bytes": 123421321
+      "url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/download/v0.3.59-launcher/TomeAnty-Launcher-0.3.59-win-x64.zip",
+      "sha256": "bce84039ffaee5733a9df98a38bd7988f28d5c0d0009c40d6099f991a0a9d1b2",
+      "size_bytes": 123421660
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "ae4471d25ab7a443c70b58ffd4f88e20d31b58ce0030765ea353ce8b0cc556bed6483573cfeaa497ec60794e8105a529d8486a0bd4185c58d5c943021d08d40d"
+  "signature": "eaddf5a6691ed904c18b867fb1a0aaace894c9fcd680e90272b55f24d93cf45f6ad884ffe8154de2dd68a8e7dd70556a7e5ab14cb4555bc700a3caee1df70503"
 }
