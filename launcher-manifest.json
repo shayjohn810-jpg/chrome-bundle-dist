@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.52",
-  "release_url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/tag/v0.3.52-launcher",
-  "release_notes": "Tightens Zod schemas (bound strings/arrays, UUID validation) and adds typecheck+test gates to the build pipeline. 93/93 tests, 0 vulnerabilities.",
-  "published_at": "2026-06-06T21:00:00Z",
+  "latest_version": "0.3.53",
+  "release_url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/tag/v0.3.53-launcher",
+  "release_notes": "Epic 6: defensive hardening (electron-log finishing pass, JSON DoS guard 50 MB, SQL identifier validation in migrations).",
+  "published_at": "2026-06-06T21:10:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/download/v0.3.52-launcher/TomeAnty-Launcher-0.3.52-win-x64.zip",
-      "sha256": "8bf41a569e1c249228c383e9a4fca061cba92933bba3675de6eb076384981443",
-      "size_bytes": 123420558
+      "url": "https://github.com/shayjohn810-jpg/tomeanty-desktop/releases/download/v0.3.53-launcher/TomeAnty-Launcher-0.3.53-win-x64.zip",
+      "sha256": "ca20df30beb5cee2925b08e3b95bd159e49aca0c5eeb59e55443a2fe762c36c2",
+      "size_bytes": 123420747
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "f99b7d13f917be1e72371037297cb5567e7508240da0cd021dc64c293712e07e50946ccee89aa1ca4ebf76dcc85c54699981ef406da1697a64efb689a0964c0d"
+  "signature": "8b440118a4dffec7fa800d51c9ad109482729c5d688f5baf7e6f4c209e71fb771e5fdd952f1fc6e18fc989d7597673091eff4b884fe280dd2be1a2d892affd0c"
 }
