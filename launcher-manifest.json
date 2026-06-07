@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.62",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.62-launcher",
-  "release_notes": "Custom binary section: replaced text input with file picker (Choose file… / Clear) — both auto-save like the notify toggle, no more deleted-but-not-saved trap. Field is now read-only, picker dialog title localized. Probe summary now uses Russian for the elapsed counter (37 с instead of 37s) and the timeout/EBUSY errors; Electron IPC wrap is stripped before display.",
-  "published_at": "2026-06-07T02:25:00Z",
+  "latest_version": "0.3.63",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.63-launcher",
+  "release_notes": "Probe spawn UNKNOWN fixed: chrome stdout/stderr now go to file descriptors instead of pipes (Windows GUI subsystem libuv quirk). Launcher self-update progress is now fully Russian: phase labels (verifying/extracting/preparing/applying), speed (МБ/с, КБ/с), ETA (ч/мин/с), size row (МБ). Saved-badge in custom binary settings auto-dismisses after 2.5s. Probe error messages localize spawn UNKNOWN as a friendly 'couldn't start Chrome' hint.",
+  "published_at": "2026-06-07T02:46:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.62-launcher/TomeAnty-Launcher-0.3.62-win-x64.zip",
-      "sha256": "064efc7b7a65115755189c6cd56acf809f5822665a4078e503a924da7fc895a5",
-      "size_bytes": 123422080
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.63-launcher/TomeAnty-Launcher-0.3.63-win-x64.zip",
+      "sha256": "ecab9c73a318ca9e9423b00eaba5fa7566c3470c9b64b8be3976a010d948e57b",
+      "size_bytes": 123422768
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "b9b025a30284bca933ccb9647157fdea9efb60b68e7aed6f7301fee6db241e0bee0da1c2ebc4cdd7c331bf2ffac1745548a5d356d288ea67d2ad71c4d36e6705"
+  "signature": "a4739ad4b7d567a56243262a069db72dbec228800e18c840dfec1c620cd509085f656ff8506b9cdb4ad81f57c7181ad7a54cb2bc31e097d42937afd7d51b820a"
 }
