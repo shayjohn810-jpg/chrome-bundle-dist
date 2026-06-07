@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.64",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.64-launcher",
-  "release_notes": "Proper Russian plurals via CLDR for time units: «1 секунда», «2 секунды», «37 секунд»; «1 минута», «4 минуты», «10 минут»; «1 час», «2 часа», «5 часов» — probe elapsed counter and launcher update ETA both pick the right form. Speed switched to Мб/сек, Кб/сек, Б/сек (plus Гб/сек). Size row uses Гб when total ≥ 1 GiB.",
-  "published_at": "2026-06-07T02:54:00Z",
+  "latest_version": "0.3.65",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.65-launcher",
+  "release_notes": "Reinstall actually does something (was a no-op when installed == latest because installVersion early-returned on existing targetDir; now passes force:true that wipes the dir first). Launcher self-update helper rewritten as PowerShell .ps1 + spawned with -WindowStyle Hidden — no more visible cmd window with timeout /t 4 during the update. Added an «Установлен актуальный движок» badge in the engine section when versions match.",
+  "published_at": "2026-06-07T03:09:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.64-launcher/TomeAnty-Launcher-0.3.64-win-x64.zip",
-      "sha256": "e7c7d513edda08b71ed11947a93f84ed609feae80dc03cd046f965cc700b5e6b",
-      "size_bytes": 123423059
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.65-launcher/TomeAnty-Launcher-0.3.65-win-x64.zip",
+      "sha256": "6c03969ef404fb462d94f1a32469110ddc951e1c235f63d1aaa45308add0dbdd",
+      "size_bytes": 123423401
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "381d9359231be5b5928a3dbd0a3cb838623fe7fad47c30ff4650d4a1fddd137bc1c8d955b3bc395f0570d0299ff2549919868266543d87aa3ae122ddde75fb02"
+  "signature": "199b7548191d3eda45713f9b1d1998211611fc40ec931561e6e4465726d1de09aca929c02e55d4f1640ae4433b35b4101f48f811a044085a38e34e6e54cad80c"
 }
