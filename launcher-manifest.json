@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.66",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.66-launcher",
-  "release_notes": "spawn UNKNOWN at chrome:launch and fingerprint:probe fixed by chdir to C:\\Windows around the spawn calls — libuv on Windows degrades CreateProcessW to UV__UNKNOWN when cwd contains non-ASCII chars. Install lifecycle ETA: synthetic from elapsed/percent, stays visible across all phases instead of disappearing after the download. Saved badge in Settings: opaque 1.0s then 500ms opacity fade (was 2.5s hard cut).",
-  "published_at": "2026-06-07T03:42:00Z",
+  "latest_version": "0.3.67",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.67-launcher",
+  "release_notes": "Chromium bundle SxS layout fixed — chrome.exe's embedded manifest references the bare Chrome version as a SxS assembly, our pack-script was putting everything flat and Windows failed with ERROR_SXS_CANT_GEN_ACTCTX → spawn UNKNOWN at chrome:launch / probe. New bundle 148.0.7778.178-tomeanty.4 packs root + version-subfolder layout. Plus 7 cosmetic bugs: MB→Мб, stray dot separator before ETA, picker «Открываю…» state, «никогда» visible during row hover, «простой»→«—», warning when custom binary lives inside managed engine tree, size context stays visible during extract/finalize.",
+  "published_at": "2026-06-07T14:48:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.66-launcher/TomeAnty-Launcher-0.3.66-win-x64.zip",
-      "sha256": "2dc1b00b028151c84ded887e4fc7c810ad9cae19e7585bda3a16ee5399ced13c",
-      "size_bytes": 123424379
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.67-launcher/TomeAnty-Launcher-0.3.67-win-x64.zip",
+      "sha256": "9e2d6720c9ba32dc7ca9acd058ab74ef599796d409fa2343c05008014b22fd0e",
+      "size_bytes": 123425655
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "bea546b5ef4acac99736058689c29429601c40df973affb6cc1309b5d6229e0e25fd7db905622337b1cc67e75701cffa7ae6433a8b297783a7969369a5248f0e"
+  "signature": "8e500c19633f5c66610882e2e6a49420b68c86f8fe613e622fb57bd1a713b1b4b6845162beab1066110624986d6a44e9787e6a90dff47ac7a73f68eba74b1307"
 }
