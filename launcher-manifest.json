@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.67",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.67-launcher",
-  "release_notes": "Chromium bundle SxS layout fixed — chrome.exe's embedded manifest references the bare Chrome version as a SxS assembly, our pack-script was putting everything flat and Windows failed with ERROR_SXS_CANT_GEN_ACTCTX → spawn UNKNOWN at chrome:launch / probe. New bundle 148.0.7778.178-tomeanty.4 packs root + version-subfolder layout. Plus 7 cosmetic bugs: MB→Мб, stray dot separator before ETA, picker «Открываю…» state, «никогда» visible during row hover, «простой»→«—», warning when custom binary lives inside managed engine tree, size context stays visible during extract/finalize.",
-  "published_at": "2026-06-07T14:48:00Z",
+  "latest_version": "0.3.68",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.68-launcher",
+  "release_notes": "Install resilience round. EPERM on a leftover bundle .zip: rmSync now retries 5×500ms and falls back to a timestamped name if Defender keeps the old file locked. Stale chrome_binary_path inside a wiped tomeanty.X folder: bootstrap auto-clears it, and both chrome:launch and the probe fall back to scanning versions/*/chrome.exe if the .current pointer is dead. Engine install progress lifted to a zustand store at App level — the bar survives navigation away from the About page instead of resetting on remount.",
+  "published_at": "2026-06-07T17:27:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.67-launcher/TomeAnty-Launcher-0.3.67-win-x64.zip",
-      "sha256": "9e2d6720c9ba32dc7ca9acd058ab74ef599796d409fa2343c05008014b22fd0e",
-      "size_bytes": 123425655
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.68-launcher/TomeAnty-Launcher-0.3.68-win-x64.zip",
+      "sha256": "4ec4ce8cc11778b3c5b956afb1c7e816bf8ff1f14f9303b4b08b60331a27bb0b",
+      "size_bytes": 123426039
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "8e500c19633f5c66610882e2e6a49420b68c86f8fe613e622fb57bd1a713b1b4b6845162beab1066110624986d6a44e9787e6a90dff47ac7a73f68eba74b1307"
+  "signature": "5a9a2e6c42e79d8e13bd13bb1bfbca580dff991a366f5fda02763f9ac247a655624495eac0a7af35310a2f4393b8359c0a2bda1c681665bf34cf4fcc9892d503"
 }
