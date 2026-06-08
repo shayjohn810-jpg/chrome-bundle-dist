@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.69",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.69-launcher",
-  "release_notes": "chrome.exe was exiting 2147483651 with 'Sandbox cannot access executable …\\chrome.exe. Отказано в доступе. (0x5)' — Chromium sandbox subprocess drops to low integrity and ACL-checks the parent binary, which fails on non-ASCII (Cyrillic) paths. Added --no-sandbox to both chrome:launch and the fingerprint probe. Probe also gets --no-zygote/--disable-gpu/--disable-software-rasterizer and dumps the first 5KB of stdout/stderr to main.log on timeout instead of just rejecting.",
-  "published_at": "2026-06-07T22:41:00Z",
+  "latest_version": "0.3.70",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.70-launcher",
+  "release_notes": "Probe stdio reliability fix. 0.3.69 timeout dumps came back 0/0 bytes for both custom chrome.exe at C:\\Program Files and managed tomeanty.5 — chrome was running for the full 60s but our file-descriptor inheritance through Node spawn wasn't catching its output. Probe now writes a .cmd wrapper that runs chrome with shell redirection (> stdout.html 2> stderr.log) and spawns cmd.exe on it. Capture is guaranteed. Trimmed --no-zygote / --disable-software-rasterizer (could wedge headless), added --enable-logging=stderr --v=1 so chrome writes its own startup logs. UI: truncate label + whitespace-nowrap on the live phase counter so the panel stops jumping between 1 and 2 lines.",
+  "published_at": "2026-06-08T00:22:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.69-launcher/TomeAnty-Launcher-0.3.69-win-x64.zip",
-      "sha256": "b6d9e8e60879c8f64d186514787b2f1d6ab21276140b2c43ccd1e156bca37034",
-      "size_bytes": 123426597
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.70-launcher/TomeAnty-Launcher-0.3.70-win-x64.zip",
+      "sha256": "b89975960b5e653a5034d5248064a57357a81093b86a977e00b1427d531c721c",
+      "size_bytes": 123426832
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "baad3db12c987256107d85281d8edfeed434363bbf814400ca75cd4674ba3b037bfdb6ed01ea1169c18d2d7b0f4c1b210494ea3a17defe3071510fc4d1f7eb06"
+  "signature": "fe59355b88451b47955bb89eddbfdc4112de5125b5d26868884390ab4e60fef45f253dec8edc6547a1eea11fb2daa1ec643cda0a908d3be1345fe1f32d8c6608"
 }
