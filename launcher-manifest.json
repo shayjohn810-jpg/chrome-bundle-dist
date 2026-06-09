@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.78",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.78-launcher",
-  "release_notes": "Critical probe fix + UI polish. Probe /json/new switched from GET to PUT (Chrome DevTools requires PUT; GET in 0.3.76-0.3.77 returned HTTP 405 for every probe). Engine block hides the Reinstall button when up-to-date — replaced with green badge + small text-link for the rare recovery case. Launcher block 'Проверить сейчас' → 'Проверить обновления' (RU) and 'Check now' → 'Check for updates' (EN) to match the engine block. Empirically re-verified on Cloud4Box: PUT /json/new returns the full sannysoft DOM (40KB with Intoli marker).",
-  "published_at": "2026-06-09T21:25:00Z",
+  "latest_version": "0.3.79",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.79-launcher",
+  "release_notes": "Probe navigation is now deterministic: open empty tab via PUT /json/new (no URL), connect CDP, Page.enable, subscribe to loadEventFired FIRST, then Page.navigate({url}) and await load + 1.5s settle. Previous query-string URL flow raced loadEventFired and returned about:blank (39B) or partial Cloudflare interstitial (188KB without Intoli marker). Empirically reverified on Cloud4Box: 1068ms total nav+load, 40616B DOM with Intoli marker. Also: DOM is always persisted to %TEMP% (success and failure) and the path is included in the error message so the user can open it and see what actually loaded.",
+  "published_at": "2026-06-09T23:12:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.78-launcher/TomeAnty-Launcher-0.3.78-win-x64.zip",
-      "sha256": "494db5527c06aa58ef1d2ec48dbefb7a1d09cfe1f06001edea556da7e0d9d06b",
-      "size_bytes": 123426449
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.79-launcher/TomeAnty-Launcher-0.3.79-win-x64.zip",
+      "sha256": "449c627cca7fa5bcbb2e0b048d621e2d168a546291bf3bf3908dab28f9119ece",
+      "size_bytes": 123426750
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "361264298e9d7cb881a47af431b27378d0172f3b6626dfd04b80be3bfa54248769b54cd386fdd6ac10a173deba6f8bd0df6e2a1b920763cd131db6d107c28b0f"
+  "signature": "105cc22207f03761e7d96ae8953982dc7b5035943f09be6727390be00eee717ea596b6a9d1c5264c951ca533bd916c657a0281bb2123226e7eb711b9e088610c"
 }
