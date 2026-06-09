@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.76",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.76-launcher",
-  "release_notes": "Probe rewritten from --dump-dom to Chrome DevTools Protocol. The new chrome bundle tomeanty.6 (is_official_build=true rebuild) does not exit cleanly under --dump-dom — empirically verified on Cloud4Box that chrome opens DevTools port, navigation works, Runtime.evaluate returns the full sannysoft DOM. New probe spawns chrome with --remote-debugging-port, waits for the port, drives DOM extraction via chrome-remote-interface. Drops PowerShell wrapper, 8.3 short-path workaround, --single-process and --dump-dom flags. Requires chrome bundle tomeanty.6 (auto-updated via chrome-manifest).",
-  "published_at": "2026-06-09T07:50:00Z",
+  "latest_version": "0.3.77",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.77-launcher",
+  "release_notes": "Unified version labels across UI. Both browser engine block and launcher updates block now say 'Текущая версия' / 'Последняя версия' (RU) and 'Current version' / 'Latest version' (EN). Previously each section used different words for the same concept.",
+  "published_at": "2026-06-09T10:05:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.76-launcher/TomeAnty-Launcher-0.3.76-win-x64.zip",
-      "sha256": "50c688104e5ce64a323e0c88196cfc87ddda814844898ccb6776ccfde287ca18",
-      "size_bytes": 123426916
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.77-launcher/TomeAnty-Launcher-0.3.77-win-x64.zip",
+      "sha256": "8a7e6c795dee574ed00be41f668649cd9f6e805e5b1b5010b3773aee32cdd99f",
+      "size_bytes": 123426800
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "54e4374db8551071f9219d126f44f576750613915f280d6c4fa55dca0193f405de894d65d868bdbeadeca01be8eb99d2ed1ab26636b9a561f4b0d41b3deb2804"
+  "signature": "8baf00528ad3c54c3344f2535c37a0657f2e324726ce630f05029814d2f1dc24b10e325fb553683272da9d172a3e98a96240a19eda0a0542e468445495fccc03"
 }
