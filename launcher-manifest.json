@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.79",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.79-launcher",
-  "release_notes": "Probe navigation is now deterministic: open empty tab via PUT /json/new (no URL), connect CDP, Page.enable, subscribe to loadEventFired FIRST, then Page.navigate({url}) and await load + 1.5s settle. Previous query-string URL flow raced loadEventFired and returned about:blank (39B) or partial Cloudflare interstitial (188KB without Intoli marker). Empirically reverified on Cloud4Box: 1068ms total nav+load, 40616B DOM with Intoli marker. Also: DOM is always persisted to %TEMP% (success and failure) and the path is included in the error message so the user can open it and see what actually loaded.",
-  "published_at": "2026-06-09T23:12:00Z",
+  "latest_version": "0.3.80",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.80-launcher",
+  "release_notes": "Proxy auth in headless probe via CDP Fetch domain. 0.3.79 fixed navigation timing but probe with proxy still failed with Page.navigate ERR_INVALID_AUTH_CREDENTIALS — the --load-extension auth handler doesn't reliably fire in --headless=new. When profile has proxy with creds, probe now enables Fetch domain with handleAuthRequests, intercepts auth challenges at the network layer, and provides credentials via Fetch.continueWithAuth(ProvideCredentials) for proxy challenges. No extension dependency. Non-proxy probes are unchanged (reverified on Cloud4Box: 1039ms total, 40KB DOM with Intoli marker).",
+  "published_at": "2026-06-09T23:23:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.79-launcher/TomeAnty-Launcher-0.3.79-win-x64.zip",
-      "sha256": "449c627cca7fa5bcbb2e0b048d621e2d168a546291bf3bf3908dab28f9119ece",
-      "size_bytes": 123426750
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.80-launcher/TomeAnty-Launcher-0.3.80-win-x64.zip",
+      "sha256": "89a48b6a6d54669c0bebb74e251cfe55f8562bfa214a41b3e48bc0235df5d067",
+      "size_bytes": 123426973
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "105cc22207f03761e7d96ae8953982dc7b5035943f09be6727390be00eee717ea596b6a9d1c5264c951ca533bd916c657a0281bb2123226e7eb711b9e088610c"
+  "signature": "f08fe3363e172fc7a8b2e08d2d7550de875338db697f0b6849be362e032bd4ea82445c5cd0bed577acb719d68cfa6326fc752ea9df6822a203c76568f6c14306"
 }
