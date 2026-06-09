@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.73",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.73-launcher",
-  "release_notes": "Probe spawn switched from Start-Process -RedirectStandard* (which creates parent with CREATE_NEW_CONSOLE and exposes chrome subprocess consoles) to System.Diagnostics.ProcessStartInfo + UseShellExecute=false + CreateNoWindow=true. CREATE_NO_WINDOW now propagates to the entire chrome tree — no more renderer/gpu/utility console windows on the desktop. Reads stdout/stderr async via ReadToEndAsync before WaitForExit so OS pipe buffers don't deadlock chrome.",
-  "published_at": "2026-06-08T00:43:30Z",
+  "latest_version": "0.3.74",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.74-launcher",
+  "release_notes": "8.3 short path workaround for the Chromium sandbox ACL check. 0.3.73 caught chrome's stub FATAL DCHECK at sandbox_win.cc:789/576 on the Cyrillic chrome.exe path, before --no-sandbox could be parsed. Probe now resolves chromeBin and the temp user-data-dir to short forms (C:\\Users\\DOKTOR~1\\…) via cmd's `for %I in (...) do @echo %~sI`, so the sandbox's GetSecurityDescriptor call gets a pure-ASCII string. Purely additive — if 8.3 names are disabled on the volume the helper returns the original path.",
+  "published_at": "2026-06-09T04:57:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.73-launcher/TomeAnty-Launcher-0.3.73-win-x64.zip",
-      "sha256": "de343fb3aa05ddefdbd4c07ca2b525d9bb15e47df513bb1ae23cbe20f948eca9",
-      "size_bytes": 123427310
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.74-launcher/TomeAnty-Launcher-0.3.74-win-x64.zip",
+      "sha256": "69ae4684c9c7a865303fe59ebb61e7070fe052f3e6cc93f1f611d9088fc580bd",
+      "size_bytes": 123427456
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "16e8334825c5d3c87216fd5bf3b5513ba1e3828d38ce91b7e9c0108c07215fb7532f4491daaa98cfe7c6ca748d3121e32b08b49f43b48d52317b518cff52990e"
+  "signature": "1ad19d401ce40b9764aad3cb6337b2db948b177bf6be06687058e992b5126528e93effa435119a256819589134e9f4cca21284f4fbbf70a0d22456c25b575504"
 }
