@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "latest_version": "148.0.7778.178-tomeanty.5",
+  "latest_version": "148.0.7778.178-tomeanty.6",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v148.0.7778.178-tomeanty.5/chrome-bundle-148.0.7778.178-tomeanty.5-win-x64.zip",
-      "sha256": "ed3cf6c271db1bb0ba2c18dcbea7be563b46e8273c0ea95ffa80f7f3b3985a39",
-      "size_bytes": 247334334,
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v148.0.7778.178-tomeanty.6/chrome-bundle-148.0.7778.178-tomeanty.6-win-x64.zip",
+      "sha256": "b6954d2bfdd703e62683b6e4fd46e9adcb1c51baab6cbf534215395bc2a73e9b",
+      "size_bytes": 203931241,
       "binary_path": "chrome.exe"
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "f461fd417dd3f88e59951e8eabc7e9199c061d1b4da70fc89ecf0ddd683ac2da772b40b07fafdde022b19403d2cacf3ea5e28d7c6b5d1369686c3fd56a5b470e"
+  "signature": "704907d0b9e595b28303a912aa052c8cbe5a0e6c5d167fca8441100971f3a22065e500f0c7d4104fe035f299260ba608ff45121c14aa8f21a2ca2a68ded90407"
 }
