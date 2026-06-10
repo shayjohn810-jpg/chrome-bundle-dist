@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.80",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.80-launcher",
-  "release_notes": "Proxy auth in headless probe via CDP Fetch domain. 0.3.79 fixed navigation timing but probe with proxy still failed with Page.navigate ERR_INVALID_AUTH_CREDENTIALS — the --load-extension auth handler doesn't reliably fire in --headless=new. When profile has proxy with creds, probe now enables Fetch domain with handleAuthRequests, intercepts auth challenges at the network layer, and provides credentials via Fetch.continueWithAuth(ProvideCredentials) for proxy challenges. No extension dependency. Non-proxy probes are unchanged (reverified on Cloud4Box: 1039ms total, 40KB DOM with Intoli marker).",
-  "published_at": "2026-06-09T23:23:00Z",
+  "latest_version": "0.3.81",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.81-launcher",
+  "release_notes": "CWS extension sideload + per-profile toggle. Install Chrome Web Store extensions by pasting either the 32-char ID or full CWS URL — the launcher pulls the CRX through Google's update endpoint, strips the CRX3 header, and unzips into userData/extensions/<id>/. Profile editor gets a new Extensions tab where each installed extension can be toggled per-profile (the profile's enabled set is passed to chrome via --load-extension). Probe also loads the same enabled set so the fingerprint surface during testing matches launch. Validated locally: 'MAX Video Downloader' v1.19.9 (3.6 MB) and 'HLS Downloader' v0.1.4 (49 KB) both install cleanly.",
+  "published_at": "2026-06-10T00:11:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.80-launcher/TomeAnty-Launcher-0.3.80-win-x64.zip",
-      "sha256": "89a48b6a6d54669c0bebb74e251cfe55f8562bfa214a41b3e48bc0235df5d067",
-      "size_bytes": 123426973
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.81-launcher/TomeAnty-Launcher-0.3.81-win-x64.zip",
+      "sha256": "af1be13638cf2b4e30df458b5e0abefb1a42b8307f469c933801e6db87f91dd9",
+      "size_bytes": 123430580
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "f08fe3363e172fc7a8b2e08d2d7550de875338db697f0b6849be362e032bd4ea82445c5cd0bed577acb719d68cfa6326fc752ea9df6822a203c76568f6c14306"
+  "signature": "7c3dc059d1557f16b04f3b798919c8cdb27480b62dbe103ba61c69192951a93a903cab9b3928524edcf9d41d4fc496bc72f3e176f1858de8e7df5ffde7405907"
 }
