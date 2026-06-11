@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.83",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.83-launcher",
-  "release_notes": "Localized right-click context menu. Cut/Copy/Paste/Select All labels now follow the launcher language: Вырезать/Копировать/Вставить/Выделить всё on Russian, English labels on EN.",
-  "published_at": "2026-06-10T01:34:00Z",
+  "latest_version": "0.3.84",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.84-launcher",
+  "release_notes": "Diagnostic updater + Mark-of-the-Web fix. Auto-restart after in-place launcher update silently failed because the updater PowerShell script swallowed every error and self-deleted. Now: Unblock-File on the new launcher exe before Start-Process (strips MOTW that ZIPs from the internet carry), drop -ErrorAction SilentlyContinue (exception messages reach the log), step-by-step trace written to updater.log (robocopy exit code, Unblock-File outcome, Start-Process PID or error), no self-delete after run so failures stay diagnosable. 0.3.83's broken updater can't auto-restart into 0.3.84 — install manually one more time, from 0.3.84+ auto-restart should work.",
+  "published_at": "2026-06-11T08:01:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.83-launcher/TomeAnty-Launcher-0.3.83-win-x64.zip",
-      "sha256": "e099c7444ffcd1a7dad243556f791c7ed6d93afc4c801e2a089e156113a2eac0",
-      "size_bytes": 123432981
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.84-launcher/TomeAnty-Launcher-0.3.84-win-x64.zip",
+      "sha256": "7e0eaa38c2a14646858a46f0bafe8dfc53c050d27f3dd262c6f321454e92a804",
+      "size_bytes": 123433300
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "01993c11abfb5a88a6e0360fb8c511c9a175103fdd1f68ae48ddbaf225dd8935ab82a2ae48e531d69d15478763901b12a32f6fdd1403bafea45875e105629509"
+  "signature": "96d49e2ac27cdabe585bd1e79f06530263f89ccd8bcc486d0e66f9a04d26e0154834ff748b16478bd757383177c0190142d716163dddf994d64d9569a0520e05"
 }
