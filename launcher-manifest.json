@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.85",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.85-launcher",
-  "release_notes": "Startup perf: lazy-load heavy pages and modals. SettingsPage, ProxiesPage, AboutPage, ProfileEditor, CommandPalette and PreLaunchModal are now React.lazy() chunks. None renders at first paint, so they're shipped as separate JS chunks loaded on demand. Savings show up at renderer cold start — AboutDashboard alone pulls in BackupSection + AutomationSection + UpdatesSection (DB + network calls) that used to load eagerly. First navigation to Settings/About has a brief one-shot chunk-load (~100-200ms), then cached for the session.",
-  "published_at": "2026-06-12T09:22:00Z",
+  "latest_version": "0.3.86",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.86-launcher",
+  "release_notes": "Session restore actually works now. Graceful chrome shutdown was using 'taskkill /PID /T'; the /T flag recursively WM_CLOSEs the whole process tree at once, so renderers died before the browser process could walk its tab list and write Current Session -> Last Session. Dropped /T so WM_CLOSE hits only the browser process; it runs its normal close path (saves session, asks renderers to shut down cleanly) before exiting. Force-fallback still uses /T /F. Profile editor X-button moved to the actual top-right corner (was floating mid-dialog at the boundary between content and summary columns). About page launcher block shows green check-mark badge when up-to-date, matching the engine block's badge.",
+  "published_at": "2026-06-12T21:38:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.85-launcher/TomeAnty-Launcher-0.3.85-win-x64.zip",
-      "sha256": "2b2383b44f963591c180e13c41454b10231e7de0b8980c9c0e336ea5970739a0",
-      "size_bytes": 123435360
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.86-launcher/TomeAnty-Launcher-0.3.86-win-x64.zip",
+      "sha256": "9e40c6d66cdf50a2f8b67a7121b44c2aeebcf8b49200d67b633ff74ef4519f96",
+      "size_bytes": 123435444
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "6dbb269d78ee1f22fd2885fbe522ce3638a876ac1cf7ef82a73c30c5b7f3ff05d6f311c086193bea005ab3a035194de3ba1931119db6d3bebfe4199c00536107"
+  "signature": "14e69835eb252cf4b62602d532098a1b3d9aca99613aee41b0787437a966b749c8f8c036f48640b9890de287d532897524db29fe9ccd727374030776d3dca206"
 }
