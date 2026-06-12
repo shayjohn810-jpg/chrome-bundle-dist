@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.87",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.87-launcher",
-  "release_notes": "HOTFIX — updater no longer wipes %TEMP%. buildUpdaterPs1 computed cleanup as join(sourceDir, '..', '..'); when the staged ZIP had no wrapper folder, that collapsed to %TEMP% and the generated .ps1 ran Remove-Item -Recurse -Force on the entire user temp tree. Fixed: buildUpdaterPs1 now takes the run-root (tomeanty-update-<runId>) as an explicit parameter, updater.log lives at runRoot/updater.log, and the generated .ps1 only runs Remove-Item if the cleanup path matches 'tomeanty-update-'. Otherwise it logs CLEANUP REFUSED and exits.",
-  "published_at": "2026-06-12T22:09:00Z",
+  "latest_version": "0.3.88",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.88-launcher",
+  "release_notes": "UX polish — editor close ✕ moved out of the native Windows title-bar zone (was sitting next to the system — □ ✕ controls). ESC now closes the editor; Ctrl+Tab / Ctrl+PageUp / Ctrl+PageDown cycle through editor tabs. Sidebar navigation grouped into Main (Profiles, Proxies) and System (Settings, About) sections.",
+  "published_at": "2026-06-12T22:32:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.87-launcher/TomeAnty-Launcher-0.3.87-win-x64.zip",
-      "sha256": "60da93af4179a9dd84ede783975d59421c1b70921793ad9183b2eef8d2fb8424",
-      "size_bytes": 123435876
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.88-launcher/TomeAnty-Launcher-0.3.88-win-x64.zip",
+      "sha256": "40e910cecc9681530a60e6dd1f9f0026434cc01ecf623c4ce2aba1ac73cb5501",
+      "size_bytes": 123436024
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "48a6412da3396c6d6c7ea296383c56b5aadbf0f44a9493eff980c231053ab35639261d98aadf968572a70dd539eece56345c5e066c61bd97c386ba442a70dd0d"
+  "signature": "f86c8ddc97b75a56bb05ccc58b6135bf15809b3fec58a3a469f20d918d36f9eff7924f87d7bfc04114676f2b2fd303cb188ee89fed6e73f3612c6d84c9773b0e"
 }
