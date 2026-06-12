@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.86",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.86-launcher",
-  "release_notes": "Session restore actually works now. Graceful chrome shutdown was using 'taskkill /PID /T'; the /T flag recursively WM_CLOSEs the whole process tree at once, so renderers died before the browser process could walk its tab list and write Current Session -> Last Session. Dropped /T so WM_CLOSE hits only the browser process; it runs its normal close path (saves session, asks renderers to shut down cleanly) before exiting. Force-fallback still uses /T /F. Profile editor X-button moved to the actual top-right corner (was floating mid-dialog at the boundary between content and summary columns). About page launcher block shows green check-mark badge when up-to-date, matching the engine block's badge.",
-  "published_at": "2026-06-12T21:38:00Z",
+  "latest_version": "0.3.87",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.87-launcher",
+  "release_notes": "HOTFIX — updater no longer wipes %TEMP%. buildUpdaterPs1 computed cleanup as join(sourceDir, '..', '..'); when the staged ZIP had no wrapper folder, that collapsed to %TEMP% and the generated .ps1 ran Remove-Item -Recurse -Force on the entire user temp tree. Fixed: buildUpdaterPs1 now takes the run-root (tomeanty-update-<runId>) as an explicit parameter, updater.log lives at runRoot/updater.log, and the generated .ps1 only runs Remove-Item if the cleanup path matches 'tomeanty-update-'. Otherwise it logs CLEANUP REFUSED and exits.",
+  "published_at": "2026-06-12T22:09:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.86-launcher/TomeAnty-Launcher-0.3.86-win-x64.zip",
-      "sha256": "9e40c6d66cdf50a2f8b67a7121b44c2aeebcf8b49200d67b633ff74ef4519f96",
-      "size_bytes": 123435444
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.87-launcher/TomeAnty-Launcher-0.3.87-win-x64.zip",
+      "sha256": "60da93af4179a9dd84ede783975d59421c1b70921793ad9183b2eef8d2fb8424",
+      "size_bytes": 123435876
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "14e69835eb252cf4b62602d532098a1b3d9aca99613aee41b0787437a966b749c8f8c036f48640b9890de287d532897524db29fe9ccd727374030776d3dca206"
+  "signature": "48a6412da3396c6d6c7ea296383c56b5aadbf0f44a9493eff980c231053ab35639261d98aadf968572a70dd539eece56345c5e066c61bd97c386ba442a70dd0d"
 }
