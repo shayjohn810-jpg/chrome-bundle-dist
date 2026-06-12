@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.84",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.84-launcher",
-  "release_notes": "Diagnostic updater + Mark-of-the-Web fix. Auto-restart after in-place launcher update silently failed because the updater PowerShell script swallowed every error and self-deleted. Now: Unblock-File on the new launcher exe before Start-Process (strips MOTW that ZIPs from the internet carry), drop -ErrorAction SilentlyContinue (exception messages reach the log), step-by-step trace written to updater.log (robocopy exit code, Unblock-File outcome, Start-Process PID or error), no self-delete after run so failures stay diagnosable. 0.3.83's broken updater can't auto-restart into 0.3.84 — install manually one more time, from 0.3.84+ auto-restart should work.",
-  "published_at": "2026-06-11T08:01:00Z",
+  "latest_version": "0.3.85",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.85-launcher",
+  "release_notes": "Startup perf: lazy-load heavy pages and modals. SettingsPage, ProxiesPage, AboutPage, ProfileEditor, CommandPalette and PreLaunchModal are now React.lazy() chunks. None renders at first paint, so they're shipped as separate JS chunks loaded on demand. Savings show up at renderer cold start — AboutDashboard alone pulls in BackupSection + AutomationSection + UpdatesSection (DB + network calls) that used to load eagerly. First navigation to Settings/About has a brief one-shot chunk-load (~100-200ms), then cached for the session.",
+  "published_at": "2026-06-12T09:22:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.84-launcher/TomeAnty-Launcher-0.3.84-win-x64.zip",
-      "sha256": "7e0eaa38c2a14646858a46f0bafe8dfc53c050d27f3dd262c6f321454e92a804",
-      "size_bytes": 123433300
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.85-launcher/TomeAnty-Launcher-0.3.85-win-x64.zip",
+      "sha256": "2b2383b44f963591c180e13c41454b10231e7de0b8980c9c0e336ea5970739a0",
+      "size_bytes": 123435360
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "96d49e2ac27cdabe585bd1e79f06530263f89ccd8bcc486d0e66f9a04d26e0154834ff748b16478bd757383177c0190142d716163dddf994d64d9569a0520e05"
+  "signature": "6dbb269d78ee1f22fd2885fbe522ce3638a876ac1cf7ef82a73c30c5b7f3ff05d6f311c086193bea005ab3a035194de3ba1931119db6d3bebfe4199c00536107"
 }
