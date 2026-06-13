@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.90",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.90-launcher",
-  "release_notes": "Bugfix — stale Windows PID. 0.3.89 detected liveness via process.kill(pid, 0), but Windows reuses PIDs aggressively, so once Chrome exited and its PID was handed to an unrelated process the tracker stayed lit and the next play could not spawn. Now Windows also validates the image name via tasklist — only chrome.exe under our PID counts as alive.",
-  "published_at": "2026-06-13T00:25:00Z",
+  "latest_version": "0.3.91",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.91-launcher",
+  "release_notes": "HOTFIX — 0.3.90 over-tightened the Windows liveness check. spawn() returned a PID instantly, but tasklist did not yet report chrome.exe under that PID for several seconds (cyrillic user-data-dir + proxy-auth extension + cold start). The poller saw \"PID exists but isn't chrome.exe\" and killed the tracker record at the ~9s mark, even though the real browser was running. UI cleared the running indicator and the next play tried to spawn a second instance — Chromium's named mutex held the original one and no new window appeared. Fix: probeWindows returns three states (chrome / pid-only / dead); during the first 30s after spawn 'pid-only' is treated as alive (Chrome is still booting). After 30s only confirmed chrome.exe counts, so PID-reuse after exit still resolves as dead.",
+  "published_at": "2026-06-13T00:55:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.90-launcher/TomeAnty-Launcher-0.3.90-win-x64.zip",
-      "sha256": "fa7cefb198aadb72460e01e13a4626612ae0f2d18c079561f0b2ce020ebc8728",
-      "size_bytes": 123435382
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.91-launcher/TomeAnty-Launcher-0.3.91-win-x64.zip",
+      "sha256": "d257243bc2a8e680ee1c2164eae92df8dbab82a2a4b3777befab88d24065be49",
+      "size_bytes": 123435515
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "4664e32090ff26da60bb927e2835027971eb6dc640833abd55b1a90053bc5b8522fc22bc395319056990d6d87109f1a4a4eb8255e5c5aa23e3b413e5cf967c01"
+  "signature": "724cbace6de53d6bba7a28ae103163007017904549913ac6c1d12bc086d86edd2f926c8a2daf04a58029d0c5c32899b3d1a42ce4a64b658633ff54bc2d43140a"
 }
