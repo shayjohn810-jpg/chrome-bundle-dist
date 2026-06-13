@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.91",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.91-launcher",
-  "release_notes": "HOTFIX — 0.3.90 over-tightened the Windows liveness check. spawn() returned a PID instantly, but tasklist did not yet report chrome.exe under that PID for several seconds (cyrillic user-data-dir + proxy-auth extension + cold start). The poller saw \"PID exists but isn't chrome.exe\" and killed the tracker record at the ~9s mark, even though the real browser was running. UI cleared the running indicator and the next play tried to spawn a second instance — Chromium's named mutex held the original one and no new window appeared. Fix: probeWindows returns three states (chrome / pid-only / dead); during the first 30s after spawn 'pid-only' is treated as alive (Chrome is still booting). After 30s only confirmed chrome.exe counts, so PID-reuse after exit still resolves as dead.",
-  "published_at": "2026-06-13T00:55:00Z",
+  "latest_version": "0.3.92",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.92-launcher",
+  "release_notes": "Pre-launch reconcile of orphan chrome.exe. Earlier releases occasionally lost their handle on a running chrome.exe (PID-reuse races, bootstrap-window false-dead). When Chromium's named mutex for the user-data-dir stayed owned by such an orphan, the next play silently merged into the orphan and no new window opened — looked like the browser refused to launch. Now launchProfile() runs reconcileOrphans() before spawn: PowerShell + WMI finds any chrome.exe whose command line contains the profile's user-data-dir, sends WM_CLOSE via 'taskkill /PID' (no /T) so Chrome can write Last Session, waits 8s, then taskkill /T /F as a fallback. Orphan from any prior session is auto-cleaned at the next play; no more manual Task-Manager-kill required.",
+  "published_at": "2026-06-13T01:27:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.91-launcher/TomeAnty-Launcher-0.3.91-win-x64.zip",
-      "sha256": "d257243bc2a8e680ee1c2164eae92df8dbab82a2a4b3777befab88d24065be49",
-      "size_bytes": 123435515
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.92-launcher/TomeAnty-Launcher-0.3.92-win-x64.zip",
+      "sha256": "752cf1b304f836c924f34a6795feac65e351402df2ff0976a6dd329ec0c1487f",
+      "size_bytes": 123437151
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "724cbace6de53d6bba7a28ae103163007017904549913ac6c1d12bc086d86edd2f926c8a2daf04a58029d0c5c32899b3d1a42ce4a64b658633ff54bc2d43140a"
+  "signature": "93ff6e66732c79a77804dc2dd69313053c942230a4785451fc73ff6f1eac2c4003d7f2c4ed971a40ae4ee3efaec74b3fc66f0df4a9a1773217878f68f1a45205"
 }
