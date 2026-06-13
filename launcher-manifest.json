@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "latest_version": "0.3.88",
-  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.88-launcher",
-  "release_notes": "UX polish — editor close ✕ moved out of the native Windows title-bar zone (was sitting next to the system — □ ✕ controls). ESC now closes the editor; Ctrl+Tab / Ctrl+PageUp / Ctrl+PageDown cycle through editor tabs. Sidebar navigation grouped into Main (Profiles, Proxies) and System (Settings, About) sections.",
-  "published_at": "2026-06-12T22:32:00Z",
+  "latest_version": "0.3.89",
+  "release_url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/tag/v0.3.89-launcher",
+  "release_notes": "Bugfix — Windows process tracking. The launcher used Linux/macOS Singleton{Lock,Cookie,Socket} file probes to detect whether a running Chromium was still alive; on Windows those files do not exist (Chromium uses a named mutex instead), so the poller always reported the profile as dead, the running-count stuck at 0 and graceful kill could not target the live PID. Now Windows probes the PID directly via process.kill(pid, 0). Also removed the redundant ✕ in the profile editor — the window's own ✕, the Cancel button and ESC are enough.",
+  "published_at": "2026-06-13T00:05:00Z",
   "platforms": {
     "win-x64": {
-      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.88-launcher/TomeAnty-Launcher-0.3.88-win-x64.zip",
-      "sha256": "40e910cecc9681530a60e6dd1f9f0026434cc01ecf623c4ce2aba1ac73cb5501",
-      "size_bytes": 123436024
+      "url": "https://github.com/shayjohn810-jpg/chrome-bundle-dist/releases/download/v0.3.89-launcher/TomeAnty-Launcher-0.3.89-win-x64.zip",
+      "sha256": "b33ec593f143f8adb802ed5d1bb1867901eeba479b31d7bf09b8b38c34ca12c5",
+      "size_bytes": 123435368
     }
   },
   "signer_key_id": "7702c59e",
-  "signature": "f86c8ddc97b75a56bb05ccc58b6135bf15809b3fec58a3a469f20d918d36f9eff7924f87d7bfc04114676f2b2fd303cb188ee89fed6e73f3612c6d84c9773b0e"
+  "signature": "6eb6667d63bf22090f26bdacb6fd62a029ea13006e9b8616250f4b24df4dc29ddeaf15a352321ae8965116279c4f187dd30c6af3443e63170dd9e7887bce210c"
 }
